@@ -25,8 +25,8 @@
 (setq ring-bell-function 'ignore)
 (when window-system (global-hl-line-mode t))
 (when window-system (global-prettify-symbols-mode t))
-(setq make-backup-file nil)
-(setq auto-save-default nil)
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
