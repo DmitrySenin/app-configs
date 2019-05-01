@@ -58,6 +58,14 @@
 #+BEGIN_SRC emacs-lisp
   (global-subword-mode 1)
 #+END_SRC
+** brackets auto-complete
+#+BEGIN_SRC emacs-lisp
+  (setq electric-pair-pairs `(
+			      (?\( . ?\))
+			      (?\[ . ?\])
+			      (?\{ . ?\})))
+  (electric-pair-mode 1)
+#+END_SRC
 * Packages
 ** which-key
 #+BEGIN_SRC emacs-lisp
