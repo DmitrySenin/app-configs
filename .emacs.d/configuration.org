@@ -26,6 +26,11 @@
   (when window-system (global-prettify-symbols-mode t))
 #+END_SRC
 
+** Show lines and columns on the modeline
+#+BEGIN_SRC emacs-lisp
+  (line-number-mode 1)
+  (column-number-mode 1)
+#+END_SRC
 * System
 ** Turn off back-ups
 #+BEGIN_SRC emacs-lisp
