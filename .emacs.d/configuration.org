@@ -167,6 +167,15 @@
     :init
     (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 #+END_SRC
+** spaceline
+#+BEGIN_SRC emacs-lisp
+  (use-package spaceline
+    :ensure t
+    :config
+    (require 'spaceline-config)
+    (setq powerline-default-separator (quote arrow))
+    (spaceline-spacemacs-theme))
+#+END_SRC
 * Overrides
 ** window splitting
 #+BEGIN_SRC emacs-lisp
