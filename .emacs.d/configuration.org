@@ -32,6 +32,10 @@
   (column-number-mode 1)
 #+END_SRC
 * System
+** map Windows to Super
+#+BEGIN_SRC emacs-lisp
+  (setq w32-lwindow-modifier 'super)
+#+END_SRC
 ** Turn off back-ups
 #+BEGIN_SRC emacs-lisp
   (setq make-backup-files nil)
@@ -77,6 +81,13 @@
     (interactive)
     (kill-buffer (current-buffer)))
   (global-set-key (kbd "C-x k") 'kill-current-buffer)
+#+END_SRC
+** kill all buffers
+#+BEGIN_SRC emacs-lisp
+  (defun kill-all-buffers ()
+    (interactive)
+    (mapc 'kill-buffer (buffer-list)))
+  (global-set-key (kbd "C-M-s-k") 'kill-all-buffers)
 #+END_SRC
 * Packages
 ** which-key
