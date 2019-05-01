@@ -39,6 +39,20 @@
 #+BEGIN_SRC emacs-lisp
   (setq ring-bell-function 'ignore)
 #+END_SRC
+** open config
+#+BEGIN_SRC emacs-lisp
+  (defun config-visit()
+    (interactive)
+    (find-file "~/.emacs.d/configuration.org"))
+  (global-set-key (kbd "C-c e") 'config-visit)
+#+END_SRC
+** realod config
+#+BEGIN_SRC emacs-lisp
+  (defun config-reload()
+    (interactive)
+    (org-babel-load-file (expand-file-name "~/.emacs.d/configuration.org")))
+   (global-set-key (kbd "C-c r") 'config-reload)
+#+END_SRC
 
 * Packages
 ** which-key
@@ -85,3 +99,16 @@
   (global-set-key (kbd "C-x C-b") 'ibuffer)
   (setq ibuffer-expert t)
 #+END_SRC
+** avy
+#+BEGIN_SRC emacs-lisp
+  (use-package avy
+    :ensure t
+    :bind ("M-s" . avy-goto-char))
+#+END_SRC
+** rainbow
+#+BEGIN_SRC emacs-lisp
+  (use-package rainbow-mode
+    :ensure t
+    :init (rainbow-mode 1))
+#+END_SRC
+
