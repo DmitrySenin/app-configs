@@ -8,3 +8,6 @@
 
 # org-mode configuration file
 /.emacs.d/configuration.el
+
+# auto save dir
+auto-save-list
