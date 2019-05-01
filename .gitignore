@@ -5,3 +5,6 @@
 
 # elpa packages
 /*/elpa/
+
+# org-mode configuration file
+/.emacs.d/configuration.el

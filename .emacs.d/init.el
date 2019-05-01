@@ -11,22 +11,7 @@
   (package-refresh-contents)
   (package-install `spacemacs-theme))
 
-(use-package which-key
-  :ensure t
-  :init
-  (which-key-mode))
-
-(defalias 'yes-or-no-p 'y-or-n-p)
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(scroll-bar-mode 0)
-(setq inhibit-startup-message t)
-(setq scroll-conservatively 100)
-(setq ring-bell-function 'ignore)
-(when window-system (global-hl-line-mode t))
-(when window-system (global-prettify-symbols-mode t))
-(setq make-backup-files nil) ; stop creating backup~ files
-(setq auto-save-default nil) ; stop creating #autosave# files
+(org-babel-load-file (expand-file-name "~/.emacs.d/configuration.org"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -37,7 +22,9 @@
  '(custom-safe-themes
    (quote
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
- '(package-selected-packages (quote (spacemacs-theme which-key use-package))))
+ '(package-selected-packages
+   (quote
+    (beacon org-bullets spacemacs-theme which-key use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
