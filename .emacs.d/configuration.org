@@ -71,6 +71,13 @@
 			      (?\{ . ?\})))
   (electric-pair-mode 1)
 #+END_SRC
+** kill the current buffer
+#+BEGIN_SRC emacs-lisp
+  (defun kill-current-buffer()
+    (interactive)
+    (kill-buffer (current-buffer)))
+  (global-set-key (kbd "C-x k") 'kill-current-buffer)
+#+END_SRC
 * Packages
 ** which-key
 #+BEGIN_SRC emacs-lisp
