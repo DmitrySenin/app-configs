@@ -9,7 +9,7 @@
 #+BEGIN_SRC emacs-lisp
   (defalias 'yes-or-no-p 'y-or-n-p)
 #+END_SRC
-** Do not show the Welcome scree
+** Do not show the Welcome screen
 #+BEGIN_SRC emacs-lisp
   (setq inhibit-startup-message t)
 #+END_SRC
@@ -60,4 +60,28 @@
     :ensure t
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
+#+END_SRC
+** ido
+*** Setup
+#+BEGIN_SRC emacs-lisp
+  (setq ido-enable-flex-matching nil)
+  (setq ido-create-new-buffer 'always)
+  (setq ido-everywhere t)
+  (ido-mode 1)
+#+END_SRC
+*** M-x
+#+BEGIN_SRC emacs-lisp
+  (use-package smex
+    :ensure t
+    :init (smex-initialize)
+    :bind ("M-x" . smex))
+#+END_SRC
+*** buffers
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-x b") 'ido-switch-buffer)
+#+END_SRC
+** ibuffer
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-x C-b") 'ibuffer)
+  (setq ibuffer-expert t)
 #+END_SRC

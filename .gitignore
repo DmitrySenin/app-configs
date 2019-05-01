@@ -11,3 +11,9 @@
 
 # auto save dir
 auto-save-list
+
+# smex files
+smex-items
+
+# ido-files
+ido.last
