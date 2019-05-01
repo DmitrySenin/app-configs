@@ -160,6 +160,13 @@
     :bind
     ([remap other-window] . switch-window))
 #+END_SRC
+** rainbow-delimeters
+#+BEGIN_SRC emacs-lisp
+  (use-package rainbow-delimiters
+    :ensure t
+    :init
+    (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
+#+END_SRC
 * Overrides
 ** window splitting
 #+BEGIN_SRC emacs-lisp
