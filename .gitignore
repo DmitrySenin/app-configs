@@ -1,13 +1,13 @@
 # Emacs
 # eshell files
-/*/eshell/history
-/*/eshell/lastdir
+/**/eshell/history
+/**/eshell/lastdir
 
 # elpa packages
-/*/elpa/
+/**/elpa/
 
 # org-mode configuration file
-/.emacs.d/configuration.el
+/**/.emacs.d/configuration.el
 
 # auto save dir
 auto-save-list
