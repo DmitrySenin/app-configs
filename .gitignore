@@ -17,3 +17,6 @@ smex-items
 
 # ido-files
 ido.last
+
+# emacs server
+server

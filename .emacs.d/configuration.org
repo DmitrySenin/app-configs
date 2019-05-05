@@ -32,6 +32,10 @@
   (column-number-mode 1)
 #+END_SRC
 * System
+** starting emacs server
+#+BEGIN_SRC emacs-lisp
+  (server-start)
+#+END_SRC
 ** map Windows to Super
 #+BEGIN_SRC emacs-lisp
   (setq w32-lwindow-modifier 'super)
