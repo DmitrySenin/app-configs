@@ -219,4 +219,9 @@
     (kill-word 1))
   (global-set-key (kbd "C-x w w") 'kill-whole-word)
 #+END_SRC
-
+* Enabled commands
+** Dired
+*** dired-find-alternate-file
+#+BEGIN_SRC emacs-lisp
+  (put 'dired-find-alternate-file 'disabled nil)
+#+END_SRC
