@@ -195,6 +195,16 @@
     :ensure t
     :bind ("M-y" . popup-kill-ring))
 #+END_SRC
+** json-mode
+#+BEGIN_SRC emacs-lisp
+  (use-package json-mode
+    :ensure t)
+#+END_SRC
+** yaml-mode
+#+BEGIN_SRC emacs-lisp
+  (use-package yaml-mode
+    :ensure t)
+#+END_SRC
 * Overrides
 ** window splitting
 #+BEGIN_SRC emacs-lisp
