@@ -1,1 +1,1 @@
-mklink /H "d:\cmder\config\user_aliases.cmd" "user_aliases.cmd"
+mklink "d:\cmder\config\user_aliases.cmd" %CD%\user_aliases.cmd
