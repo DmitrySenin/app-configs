@@ -111,6 +111,10 @@
     (mapc 'kill-buffer (buffer-list)))
   (global-set-key (kbd "C-M-s-k") 'kill-all-buffers)
 #+END_SRC
+** turn off indentation using tabs
+#+BEGIN_SRC emacs-lisp
+  (setq-default indent-tabs-mode nil)
+#+END_SRC
 * Packages
 ** which-key
 #+BEGIN_SRC emacs-lisp
