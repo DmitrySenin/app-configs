@@ -13,4 +13,4 @@ history=cat "%CMDER_ROOT%\config\.history"
 unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
-emacs-run-client=emacsclientw.exe -c -n -a runemacs.exe -F "((fullscreen . maximized))"
+emacs-run-client=emacsclientw.exe -c -n -a runemacs.exe -F "((fullscreen . maximized))" $*
