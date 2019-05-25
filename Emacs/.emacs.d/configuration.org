@@ -49,6 +49,10 @@
 #+BEGIN_SRC emacs-lisp
   (global-display-line-numbers-mode)
 #+END_SRC
+** wrap long lines
+#+BEGIN_SRC emacs-lisp
+  (visual-line-mode 1)
+#+END_SRC
 * System
 ** starting emacs server
 #+BEGIN_SRC emacs-lisp
