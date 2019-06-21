@@ -35,11 +35,6 @@
 #+BEGIN_SRC emacs-lisp
   (when window-system (global-hl-line-mode t))
 #+END_SRC
-** Prettify symbols(lambda to λ)
-#+BEGIN_SRC emacs-lisp
-  (when window-system (global-prettify-symbols-mode t))
-#+END_SRC
-
 ** Show lines and columns on the modeline
 #+BEGIN_SRC emacs-lisp
   (line-number-mode 1)
