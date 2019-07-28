@@ -24,10 +24,13 @@
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
  '(package-selected-packages
    (quote
-    (ido-vertical-mode magit handlebars-mode yaml-mode json-mode popup-kill-ring htmlize spaceline rainbow-delimiters switch-window rainbow-mode avy smex beacon org-bullets spacemacs-theme which-key use-package)))
+    (projectile ido-vertical-mode magit handlebars-mode yaml-mode json-mode popup-kill-ring htmlize spaceline rainbow-delimiters switch-window rainbow-mode avy smex beacon org-bullets spacemacs-theme which-key use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "outline" :family "Fira Code")))))
+
+;; defining safe values of local variables
+(put 'projectile-project-compilation-cmd 'safe-local-variable 'stringp)

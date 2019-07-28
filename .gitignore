@@ -20,3 +20,7 @@ ido.last
 
 # emacs server
 server
+
+# projectile
+projectile-bookmarks.eld
+projectile.cache
