@@ -139,32 +139,6 @@
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
 #+END_SRC
-** ido
-*** Setup
-#+BEGIN_SRC emacs-lisp
-  (setq ido-enable-flex-matching nil)
-  (setq ido-create-new-buffer 'always)
-  (setq ido-everywhere t)
-  (ido-mode 1)
-#+END_SRC
-*** M-x
-#+BEGIN_SRC emacs-lisp
-  (use-package smex
-    :ensure t
-    :init (smex-initialize)
-    :bind ("M-x" . smex))
-#+END_SRC
-*** buffers
-#+BEGIN_SRC emacs-lisp
-  (global-set-key (kbd "C-x b") 'ido-switch-buffer)
-#+END_SRC
-*** vertical layout
-#+BEGIN_SRC emacs-lisp
-  (use-package ido-vertical-mode
-    :ensure t
-    :init
-    (ido-vertical-mode 1))
-#+END_SRC
 ** ibuffer
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -243,6 +217,19 @@
   (use-package magit
     :ensure t
     :config (global-set-key (kbd "C-x g") 'magit-status))
+#+END_SRC
+** helm
+#+BEGIN_SRC emacs-lisp
+  (use-package helm
+    :ensure t
+    :config
+    (require 'helm-config)
+    (helm-mode 1)
+    (define-key global-map [remap find-file] 'helm-find-files)
+    (define-key global-map [remap occur] 'helm-occur)
+    (define-key global-map [remap list-buffers] 'helm-buffers-list)
+    (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
+    (define-key global-map [remap execute-extended-command] 'helm-M-x))
 #+END_SRC
 ** projectile
 #+BEGIN_SRC emacs-lisp
