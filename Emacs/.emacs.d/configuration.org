@@ -238,7 +238,9 @@
     :bind-keymap
     ("C-c p" . projectile-command-map)
     :config
-    (projectile-mode 1))
+    (projectile-mode 1)
+    (setq projectile-switch-project-action #'projectile-dired)
+    (setq projectile-completion-system 'helm))
 #+END_SRC
 ** helm-projectile
 #+BEGIN_SRC emacs-lisp
