@@ -1,0 +1,7 @@
+-auto-save-list/
+-elpa/
+-eshell/
+-server/
+-projectile.cache
+-ido.last
+-smex-items
