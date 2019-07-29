@@ -240,6 +240,14 @@
     :config
     (projectile-mode 1))
 #+END_SRC
+** helm-projectile
+#+BEGIN_SRC emacs-lisp
+  (use-package helm-projectile
+    :ensure t
+    :after projectile
+    :config
+    (helm-projectile-on))
+#+END_SRC
 * Overrides
 ** window splitting
 #+BEGIN_SRC emacs-lisp
