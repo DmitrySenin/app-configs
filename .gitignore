@@ -25,5 +25,8 @@ server
 projectile-bookmarks.eld
 projectile.cache
 
+# anaconda
+/**/anaconda-mode/
+
 # Misc
 /**/.emacs.d/transient/

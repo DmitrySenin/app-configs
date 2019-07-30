@@ -268,6 +268,21 @@
                               company-pseudo-tooltip-unless-just-one-frontend
                               company-echo-metadata-frontend)))
 #+END_SRC
+** python
+*** anaconda-mode
+#+BEGIN_SRC emacs-lisp
+  (use-package anaconda-mode
+    :ensure t
+    :config
+    (add-hook 'python-mode-hook 'anaconda-mode)
+    (add-hook 'python-mode-hook 'anaconda-eldoc-mode))
+#+END_SRC
+*** company-anaconda
+#+BEGIN_SRC emacs-lisp
+  (use-package company-anaconda
+    :ensure t
+    :config (add-to-list 'company-backends 'company-anaconda))
+#+END_SRC
 * Overrides
 ** window splitting
 #+BEGIN_SRC emacs-lisp
