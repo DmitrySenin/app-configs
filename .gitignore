@@ -24,3 +24,6 @@ server
 # projectile
 projectile-bookmarks.eld
 projectile.cache
+
+# Misc
+/**/.emacs.d/transient/
