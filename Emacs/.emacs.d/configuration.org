@@ -257,6 +257,17 @@
     :config
     (helm-projectile-on))
 #+END_SRC
+** company
+#+BEGIN_SRC emacs-lisp
+  (use-package company
+    :ensure t
+    :config
+    (global-company-mode t)
+    ;; show completions inline and in a tooltip
+    (setq company-frontends '(company-preview-frontend
+                              company-pseudo-tooltip-unless-just-one-frontend
+                              company-echo-metadata-frontend)))
+#+END_SRC
 * Overrides
 ** window splitting
 #+BEGIN_SRC emacs-lisp
