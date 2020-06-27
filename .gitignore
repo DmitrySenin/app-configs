@@ -30,3 +30,6 @@ projectile.cache
 
 # Misc
 /**/.emacs.d/transient/
+
+# Spacemacs
+/spacemacs/.emacs.d/*
